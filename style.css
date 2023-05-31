@@ -1,0 +1,224 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+
+    /* -------- PRIMARY COLORS -------- */
+    --primer-color: hsl(31, 77%, 52%);
+    --segundo-color: hsl(184, 100%, 22%);
+    --tercer-color: hsl(179, 100%, 13%);
+
+    /* ------- cOLORES SEUNDARIOS ------- */
+    --paragraphs:  hsla(0, 0%, 100%, 0.75);
+    --background: hsl(0, 0%, 95%);
+
+    /* ------ FONTS ------- */
+    --lexend: 'Lexend Deca', sans-serif; 
+    --big-shoulders: 'Big Shoulders Display', cursive;
+}
+
+body{
+    display: grid;
+    place-items: center center;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    margin-top: 45px;
+}
+
+
+/* ---------- CARDS ---------- */
+.card1{
+    background-color: var(--primer-color);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card2{
+    background-color: var(--segundo-color);
+}
+
+.card3{
+    background-color: var(--tercer-color);
+    border-radius: 0px 10px 10px 0px;    
+}
+
+.car-model{
+    font-family: var(--big-shoulders);
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--background);
+}
+
+/* ---------- PARAGRAPH ----------- */
+.paragraph{
+    font-family: var(--lexend);
+    font-size: 15px;
+    color: var(--paragraphs);
+    line-height: 2;
+}
+
+
+/* --------- BUTTON ---------- */
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    width: 140px;
+    height: 45px;
+    background-color: var(--background);
+    border-radius: 40px;
+    transition: all 400ms;
+}
+
+.button1{
+    color: var(--primer-color);
+}
+
+.button2{
+    color: var(--segundo-color);
+}
+
+.button3{
+    color: var(--tercer-color);
+}
+
+
+/* -------- MARGINS -------- */
+.section{
+    display: grid;
+    row-gap: 40px;
+    padding: 40px;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -58px;
+    width: 100%;
+    height: 40px;
+    font-family: var(--lexend);
+    background-color: cadetblue;
+    color: rgb(0, 0, 0);
+}
+
+#footer a{ 
+    color: rgb(31, 10, 217);
+}
+
+.button:hover{
+    background: black;
+    color: white;
+    transform: scale(1.1,1.1);
+}
+
+/* ---------- RESPONSIVE ----------- */
+
+/* ------------TABLET------------- */
+@media (max-width: 860px){ 
+
+    #container{
+        display: grid;
+        
+        grid-template-columns: repeat(1, 450px);
+        margin: 20px 0px 20px 0px;
+    }
+
+    .card1{
+        background-color: var(--primer-color);
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .card2{
+        background-color: var(--segundo-color);
+    }
+    
+    .card3{
+        background-color: var(--tercer-color);
+        border-radius: 0px 0px 10px 10px;    
+    }
+
+    .section{
+        display: grid;
+        row-gap: 45px;
+        padding: 35px;
+    }
+
+    .header{
+        display: flex;
+        gap: 20px;
+    }
+
+    .button{
+      margin: 40px auto 0px auto;
+    }
+
+}
+
+
+/* -------MOBILE-------- */
+@media (max-width: 460px){
+
+    #container{
+        display: grid;
+        
+        grid-template-columns: repeat(1, 350px);
+        margin: 20px 0px 20px 0px;
+    }
+
+    .card1{
+        background-color: var(--primer-color);
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .card2{
+        background-color: var(--segundo-color);
+    }
+    
+    .card3{
+        background-color: var(--tercer-color);
+        border-radius: 0px 0px 10px 10px;    
+    }
+
+    .section{
+        display: grid;
+        row-gap: 40px;
+        padding: 35px;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button{
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        font-family: var(--lexend);
+        font-size: 14px;
+        background-color: cadetblue;
+        color: rgb(0, 0, 0);
+    }
+
+}
+
